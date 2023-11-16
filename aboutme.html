@@ -18,8 +18,17 @@ p.a{
 font-family: Lucida Calligraphy;
 font-weight: bold;
 }
+.grid-container {
+  display: grid;
+  padding: 10px;
+  text-align: center;
+}
+.grid-item {
+background-color: palegreen;
+padding: 15px;
+font-size: 20px;
+}
 </style>
-</head>
 
 
 <h2>About Me</h2>
@@ -33,9 +42,11 @@ font-weight: bold;
 
 <p class="a"><a href="https://docs.google.com/document/d/17LXxLxhc7SvKlDO7xhYvRyqnc8ygqfy4lqxPy_0H9fI/edit?usp=sharing" target="_blank">Some of my poems</a></p>
 
-<p><a href="website.html" target="_blank">To Main page</a></p>
-<p><a href="poetryadvice.html" target="_blank">To poetry advice</a></p>
-<p><a href="tipsforswim.html" target="_blank">To Swim Advice</></p>
+<div class= "grid-container">
+<div class="grid-item"><a href="website.html" target="_blank">To Main page</a></div>
+<div class="grid-item"><a href="poetryadvice.html" target="_blank">To poetry advice</a></div>
+<div class="grid-item"><a href="tipsforswim.html" target="_blank">To Swim Advice</></div>
+</div>
 
 </body>
-<html>
+</html>
