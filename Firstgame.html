@@ -1,0 +1,42 @@
+<!DOCUTYPE html>
+<html>
+<head>
+<style>
+
+body {
+background-color: purple;
+}
+p{
+font-family: Times New Roman;
+font-size: 20;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Who Wants to Play a Game?</h1>
+<p>Rules: Try to guess what the right number is between 0 and 500.</p>
+
+<input id="anynumber" value="0" />
+<button onclick="myFunction()">Guess</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+const number = "anynumber";
+let answer;
+
+if (anynumber == 67) {
+answer = "correct";
+} else {
+answer = "incorrect";
+}
+ 
+document.getElementById("demo").innerHTML = answer;
+}
+</script>
+
+</body>
+</html>
