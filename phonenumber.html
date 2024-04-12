@@ -1,0 +1,38 @@
+<!DOCUTYPE html>
+<html>
+<head>
+<style>
+body {
+background-color: tan;
+font-family: papyrus;
+font-size: 15;
+}
+</style>
+</head>
+
+<body>
+    <h2>What's Your Number ;)</h2>
+<p> Sometimes, you don't have the time to put in your phone number in the standard, US, form. The one that has the area code and all that. So, here just write it however you like to and press convert. The site will change your phone number into a regular standard form. Otherwise, it will say it's invalid. So what's your number?</p>
+
+<input id="phone" placeholder="Enter phone number" />
+<button onclick="convert()">Convert to Standard Form</button>
+
+<script>
+    let number;
+    function convert() {
+        number = document.getElementById("phone").value;
+        if(/1[+][(]\d{3}[)][-]\d{3}[-]\d{4}/.test(number) && number.length == 16) {
+            
+        } else if(/[(]\d{3}[)][-]\d{3}[-]\d{4}/.test(number) && number.length == 14) {
+            document.getElementById("phone").value = "1+" + number;
+        } else if(/\d{3}[-]\d{3}[-]\d{4}/.test(number) && number.length == 12) {
+            document.getElementById("phone").value = "1+(" + number.slice(0,3) + ")" + number.slice(3,12);
+        } else if(/\d{10}/ && number.length == 10) {
+            document.getElementById("phone").value = "1+(" + number.slice(0,3) + ")-" + number.slice(3,6) + "-" + number.slice(6,10);
+        } else {
+            alert("Input is invalid");
+        }
+    }
+</script>
+</body>
+</html>
